@@ -11,6 +11,7 @@ python-decouple = "*"
 cloudinary = "*"
 django-cors-headers = "*"
 gunicorn = "*"
+dj-database-url = "*"
 
 [dev-packages]
 autopep8 = "*"
