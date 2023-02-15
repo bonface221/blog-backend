@@ -146,7 +146,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://web-production-4431a.up.railway.app/'
+    'https://web-production-4431a.up.railway.app/*'
 ]
 
 cloudinary.config(
