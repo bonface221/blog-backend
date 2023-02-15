@@ -10,6 +10,7 @@ psycopg2 = "*"
 python-decouple = "*"
 cloudinary = "*"
 django-cors-headers = "*"
+gunicorn = "*"
 
 [dev-packages]
 autopep8 = "*"
