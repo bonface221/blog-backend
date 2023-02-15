@@ -30,11 +30,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-db_config =dj_database_url.config(conn_max_age=600,ssl_require=True)
+db_config = dj_database_url.config(conn_max_age=600, ssl_require=True)
 # Application definition
 
 INSTALLED_APPS = [
@@ -86,8 +86,8 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 
 if db_config:
     # Heroku/railway -> production
-    DATABASES={}
-    DATABASES['default'] =db_config
+    DATABASES = {}
+    DATABASES['default'] = db_config
 
 else:
     DATABASES = {
