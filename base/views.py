@@ -14,11 +14,12 @@ class BlogViewSet(
     serializer_class = BlogSerializer
 
     def get_queryset(self):
-        queryset = Blog.objects.all()
+        queryset = Blog.objects.select_related('category').all()
         category_id = self.request.query_params.get('category_id')
 
         if category_id is not None:
-            queryset = queryset.filter(category_id=category_id)
+            queryset = queryset.filter(
+                category_id=category_id).select_related('category')
 
         return queryset
 
